@@ -1,0 +1,200 @@
+﻿body, html {
+    height: 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face
+{
+    font-family: BrushScriptMt;
+    src: url('../fonts/BRUSHSCI.TTF');
+}
+
+.fancy {
+    font-family: 'BrushScriptMt', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #00b050;
+}
+
+.navbar-colored {
+    /*background-color: #00b050;*/
+    background-color: #000000;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("../img/road-mountain.jpeg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.price-box {
+    background-color: #FFFFFF;
+    border: 2px solid #CCCCCC;
+    color: black;
+    height: 500px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.price-box-body {
+    padding: 15px;
+}
+
+.price-box-title {
+    background-color: #F4F4F4;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: center;
+    margin: 0px;
+    padding: 15px;
+}
+
+.price-box-middle {
+    height: 600px;
+    margin-top: 0px;
+}
+
+.price-box-title.price-box-middle-title {
+    background-color: #ffca00;
+}
+
+.price-original {
+    color: #AAAAAA; 
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+.price-sale {
+    color: red; 
+    font-size: 2.5em;
+    margin: 5px;
+}
+
+.reason-box {
+    background-color: #F4F4F4;
+    border-radius: 4px;
+    border: 2px solid #CCCCCC;
+    height: 250px;
+    margin-top: 100px;
+    padding: 0 15px 30px;
+}
+
+.reason-box-icon {
+    background-color: #FFFFFF; 
+    border: 2px solid #CCCCCC; 
+    border-radius: 50%;    
+    width: 75px; 
+    height: 75px;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#benefits {
+    background-color: #424242;
+    color: #FFFFFF;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+#book-art {
+    width: 100%;
+}
+
+#contact {
+    background-color: #424242;
+    color: #FFFFFF;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+#details {
+    padding-top: 50px;
+}
+
+#dream {
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0.75;
+}
+
+#logo {
+    height: 50px;
+}
+
+#motto {
+    color: #000000;
+    padding-top: 15%;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+#package {
+    margin: 20px 20px 0px 20px;
+}
+
+#package td {
+    padding: 10px;
+}
+
+#preview {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+#preview p {
+    margin-bottom: 10px;
+}
+
+#pricing {
+    background-color: #00b050;
+    color: #FFFFFF;
+    padding-bottom: 60px;
+    padding-top: 100px;
+}
+
+#reasons {
+    padding-bottom: 50px;
+}
+
+#testimonial {
+    color: #00b050;
+    font-size: 1.75em;
+    font-style: italic;
+    padding-top: 20px;
+}
+
+#video {
+    margin: 50px auto;
+}
