@@ -47,9 +47,21 @@ function attachPromoCodes() {
         // Get the code        
         var code = url.substr(url.lastIndexOf("#") + 1);
 
-        // Update links with code
-        $('.price-box').find(".btn-lg").each(function () {
-            $(this).attr('href', $(this).attr('href') + '/' + code);
-        });
+        // Affiliate codes
+        var affiliates = {
+            hatch: "https://gumroad.com/a/434844787"
+        }
+
+        // Update to affiliate links if affiliate
+        if (affiliates.hasOwnProperty(code))
+            $('.price-box').find(".btn-lg").each(function () {
+                $(this).attr('href', affiliates[code]);
+            });
+        else {
+            // Update links with code
+            $('.price-box').find(".btn-lg").each(function () {
+                $(this).attr('href', $(this).attr('href') + '/' + code);
+            });
+        }
     }
 }
