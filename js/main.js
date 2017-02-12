@@ -15,7 +15,9 @@ $(window).scroll(function () {
 attachPromoCodes();
 
 var testimonials = new Array("\"Early Retirement or Retirement planning does not have to be difficult. Sean's book simplifies steps you can take to build savings that you think you already know, but you really don't.\" -Joe Hill",
-    "\"Sean has helped kick start my interest in financial independence. Since I started listening to his podcast, I've overhauled my long term financial goals and gained a better understanding about how today's actions affect tomorrow.\" -Larry Burris");
+    "\"Sean has helped kick start my interest in financial independence. Since I started listening to his podcast, I've overhauled my long term financial goals and gained a better understanding about how today's actions affect tomorrow.\" -Larry Burris",
+    "\"I've known Sean for quite a few years, and the one thing I know is that he wouldn't have done any of this if he didn't believe in it himself - let alone follow his own guidance! Sean has put a lot of research, thought, and time into this book, and if you're looking for guidance on retiring early...start here!\" -Eric McBride",
+    "\"Awesome book. Lots of great tips. I especially like the 'Learn from My Story' sections. I feel like I know you better. Congrats!\" -Michael Carter");
 var nextTestimonial = 0;
 doTestimonial();
 
