@@ -1,0 +1,32 @@
+﻿#article {
+    padding: 50px 0px 50px 0px;
+}
+
+#article blockquote {
+    background-color: rgb(238, 238, 238);
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#article blockquote > p > strong {
+    color: #00B050;
+}
+
+#article h1 {
+    background-color: #00B050;
+    color: #FFCA00;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+#article h2 {
+    font-weight: bold;
+    padding: 10px 0px 10px 0px;
+}
+
+#article h3 {
+    background-color: #424242;
+    color: #FFFFFF;
+    padding: 5px;
+}
