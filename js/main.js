@@ -51,14 +51,13 @@ function attachPromoCodes() {
 
         // Affiliate codes
         var affiliates = {
+            erd: "https://gumroad.com/a/213988467",
             hatch: "https://gumroad.com/a/434844787"
         }
 
         // Update to affiliate links if affiliate
         if (affiliates.hasOwnProperty(code))
-            $('.price-box').find(".btn-lg").each(function () {
-                $(this).attr('href', affiliates[code]);
-            });
+            window.location = affiliates[code];
         else {
             // Update links with code
             $('.price-box').find(".btn-lg").each(function () {
