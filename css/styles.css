@@ -10,6 +10,21 @@
     src: url('../fonts/BRUSHSCI.TTF');
 }
 
+.btnWide {
+    text-align: center;
+    background-color: #00b050;
+    color: #ffca00;
+    cursor: pointer;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 25px;
+}
+
+.btnWide:hover {
+    color: #ffca00;
+    text-decoration: none;
+}
+
 .fancy {
     font-family: 'BrushScriptMt', Verdana, Arial, Helvetica, sans-serif;
     font-size: 1.4em;
@@ -207,9 +222,27 @@
     color: #00b050;
     font-size: 1.75em;
     font-style: italic;
+    height: 250px;
     padding-top: 20px;
 }
 
 #video {
     margin: 50px auto;
+}
+
+
+@media (max-width: 767px) {
+    .btnWide {        
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 5px;
+    }
+
+    #motto {
+        font-size: 4em;
+    }
+
+    #testimonial {
+        font-size: 1.2em;
+    }
 }
