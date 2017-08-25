@@ -53,7 +53,8 @@ function attachPromoCodes() {
         var affiliates = {
             erd: "https://gumroad.com/a/213988467",
             hatch: "https://gumroad.com/a/434844787",
-            thefrugalgirl: "https://gumroad.com/a/955855987"
+            thefrugalgirl: "https://gumroad.com/a/955855987",
+            gohuntlife: "https://gumroad.com/a/474395763"
         }
 
         // Update to affiliate links if affiliate
