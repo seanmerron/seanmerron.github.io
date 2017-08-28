@@ -50,21 +50,22 @@ function attachPromoCodes() {
         var code = url.substr(url.lastIndexOf("#") + 1);
 
         // Affiliate codes
-        var affiliates = {
-            erd: "https://gumroad.com/a/213988467",
-            hatch: "https://gumroad.com/a/434844787",
-            thefrugalgirl: "https://gumroad.com/a/955855987",
-            gohuntlife: "https://gumroad.com/a/474395763"
-        }
+        // This created a recursing loop just have affiliates use the gumroad url
+        //var affiliates = {
+        //    erd: "https://gumroad.com/a/213988467",
+        //    hatch: "https://gumroad.com/a/434844787",
+        //    thefrugalgirl: "https://gumroad.com/a/955855987",
+        //    gohuntlife: "https://gumroad.com/a/474395763"
+        //}
 
-        // Update to affiliate links if affiliate
-        if (affiliates.hasOwnProperty(code))
-            window.location = affiliates[code];
-        else {
+        //// Update to affiliate links if affiliate
+        //if (affiliates.hasOwnProperty(code))
+        //    window.location = affiliates[code];
+        //else {
             // Update links with code
             $('.price-box').find(".btn-lg").each(function () {
                 $(this).attr('href', $(this).attr('href') + '/' + code);
             });
-        }
+        //}
     }
 }
