@@ -1,8 +1,8 @@
 ﻿//Slideshow for Background
 //Array of images which you want to show: Use path you want.
-var images = new Array('../img/road-mountain.jpeg', '../img/freedom.jpeg', '../img/road-desert.jpg', '../img/freedom.jpg', '../img/road-forest.jpeg', '../img/field.jpg',  '../img/road-snow.jpg');
+//var images = new Array('../img/road-mountain.jpeg', '../img/freedom.jpeg', '../img/road-desert.jpg', '../img/freedom.jpg', '../img/road-forest.jpeg', '../img/field.jpg',  '../img/road-snow.jpg');
 var nextimage = 0;
-doSlideshow();
+//doSlideshow();
 
 $(window).scroll(function () {
     if ($(".navbar").offset().top > 50) {
@@ -19,7 +19,7 @@ var testimonials = new Array("\"Early Retirement or Retirement planning does not
     "\"I've known Sean for quite a few years, and the one thing I know is that he wouldn't have done any of this if he didn't believe in it himself - let alone follow his own guidance! Sean has put a lot of research, thought, and time into this book, and if you're looking for guidance on retiring early...start here!\" -Eric McBride",
     "\"Awesome book. Lots of great tips. I especially like the 'Learn from My Story' sections. I feel like I know you better. Congrats!\" -Michael Carter");
 var nextTestimonial = 0;
-doTestimonial();
+//doTestimonial();
 
 function doSlideshow() {
     if (nextimage >= images.length) { nextimage = 0; }
@@ -63,7 +63,7 @@ function attachPromoCodes() {
         //    window.location = affiliates[code];
         //else {
             // Update links with code
-            $('.price-box').find(".btn-lg").each(function () {
+            $('#prices').find(".btn-lg").each(function () {
                 $(this).attr('href', $(this).attr('href') + '/' + code);
             });
         //}
