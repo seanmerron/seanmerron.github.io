@@ -1,38 +1,39 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="thumbnail" content="http://earlyretirementroadmap.com/img/book-art.png" />
-
-    <title>The Early Retirement Roadmap | Achieve Financial Independence, Faster</title>
+    <!--  App Title  -->
+    <title>FIRE Age Calculator: Estimate the age you will acheive Financial Independence and Retire Early (FIRE)</title>
     <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!--  App Description  -->
+    <meta name="description" content="Estimate the age you will acheive Financial Independence and Retire Early (FIRE)" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/owl.transitions.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scrollTo.js"></script>
+    <script type="text/javascript" src="js/wow.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
+    <script type="text/javascript" src="js/nicescroll.js"></script>
+    <script type="text/javascript" src="js/jquery.number.min.js"></script>
+    <script type="text/javascript" src="js/main3.js"></script>
+
     <!-- Open Graph Preview Info -->
     <meta property="twitter:site" value="@seanmerron">
-    <meta content="The Early Retirement Roadmap" property="og:site_name">
-    <meta content="The Early Retirement Roadmap" property="og:title">
-    <meta content="http://earlyretirementroadmap.com/" property="og:url">
-    <meta content="The Early Retirement Roadmap is straight up, priceless knowledge to get your life on autopilot towards retirement, faster. Sean Merron, the creator of FIREAgeCalc.com and co-host of The 2 Frugal Dudes Podcast shares everything he's learned from his research and life mistakes so you can get on track. You'll learn how to figure out what retirement means to you and the benefits of having early retirement as a passive income backup plan to give you the freedom to do what you love, when you love doing it. This jam packed book will teach you how to track your money, tackle debt and invest to use the power of compound interest. The longer you wait to make the changes in your life, the longer you'll have to work." property="og:description">
-    <meta content="The Early Retirement Roadmap is straight up, priceless knowledge to get your life on autopilot towards retirement, faster. Sean Merron, the creator of FIREAgeCalc.com and co-host of The 2 Frugal Dudes Podcast shares everything he's learned from his research and life mistakes so you can get on track. You'll learn how to figure out what retirement means to you and the benefits of having early retirement as a passive income backup plan to give you the freedom to do what you love, when you love doing it. This jam packed book will teach you how to track your money, tackle debt and invest to use the power of compound interest. The longer you wait to make the changes in your life, the longer you'll have to work." name="description">
-    <meta property="twitter:title" value="The Early Retirement Roadmap" />
-    <meta property="twitter:domain" value="EarlyRetirementRoadmap" />
-    <meta property="twitter:description" value="The Early Retirement Roadmap is straight up, priceless knowledge to get your life on autopilot towards retirement, faster. Sean Merron, the creator of FIREAgeCalc.com and co-host of The 2 F..." />
-    <meta property="twitter:image" value="http://earlyretirementroadmap.com/img/book-art.png" />
-    <meta content="http://earlyretirementroadmap.com/img/book-art.png" property="og:image">
-
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta content="FIRE Age Calc" property="og:site_name">
+    <meta content="FIRE Age Calc" property="og:title">
+    <meta content="http://fireagecalc.com/" property="og:url">
+    <meta content="Estimate the age you will acheive Financial Independence and Retire Early (FIRE)" property="og:description">
+    <meta content="Estimate the age you will acheive Financial Independence and Retire Early (FIRE)" name="description">
+    <meta property="twitter:title" value="FIRE Age Calc" />
+    <meta property="twitter:domain" value="FIREAgeCalc" />
+    <meta property="twitter:description" value="Estimate the age you will acheive Financial Independence and Retire Early (FIRE)" />
 
     <!-- Google Analytics -->
     <script>
@@ -43,353 +44,262 @@
             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-91394024-1', 'auto');
+        ga('create', 'UA-78756721-1', 'auto');
         ga('send', 'pageview');
 
     </script>
+
+    <style type="text/css">
+        .highlight {
+            background: rgba(144, 238, 144, 0.31);
+        }
+
+        .nav-tabs a {
+            color: gray;
+        }
+
+            .nav-tabs a:focus, .nav-tabs .active a {
+                color: darkgreen !important;
+                /*font-weight: bold !important;*/
+            }
+
+        .nav-tabs h4 {
+            font-weight: bold;
+        }
+
+        /*	.tab-pane{
+            border: 1px solid #ddd;
+            border-top: 0;
+            background: white;
+            padding-bottom: 20px;
+        }*/
+    </style>
+
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+
+
+    <!--  Hero Section  -->
+    <section class="hero" id="hero">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" style="max-width: 80%; padding: 10px 0px 0px 5px;"><img alt="The Early Retirement Roadmap" src="img/logo.png" id="logo" /></a>
+            <div class="caption">
+                <h1 class="text-uppercase  animated wow fadeInLeft">Fire Age Calculator</h1>
+                <p class="animated wow fadeInLeft" style="color:maroon;background:rgba(255,255,255,0.25);padding:10px 20px;">Estimate the age you will acheive Financial Independence and Retire Early (FIRE)</p>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#tblPrice">Pricing</a></li>
-                    <li><a href="/articles"><strong>FREE</strong> Articles</a></li>
-                    <li><a href="http://2frugaldudes.com/" target="_blank">Podcast</a></li>
-                    <li><a href="http://fireagecalc.com/" target="_blank">FireAgeCalc</a></li>
-                    <li><a href="https://earlyretirementchat.slack.com" target="_blank">Chat Room</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-
-    <div id="details">
-        <div class="container">
-            <div class="row" style="margin-top: 50px;">
-                <div class="col-md-8">
-                    <div class="videoWrapper">
-                        <iframe width="640" height="360" src="https://www.youtube.com/embed/A8q9LJtF7-w?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <!--<img alt="The Early Retirement Roadmap Book Cover" src="img/book-art.png" style="height: 300px;" />-->
-                    <h2>Your Dreams Are Waiting!</h2>
-                    <div class="_form_1"></div>
-                    <script src="https://earlyretirementroadmap.activehosted.com/f/embed.php?id=1" type="text/javascript" charset="utf-8"></script>
-                </div>
-            </div>
-
-            <div class="row" style="margin-top: 50px;">
-                <div class="col-md-6">
-                    <div class="text-center">
-                        <h2>Hi, I'm Sean Merron</h2>
-                        <h2>Your "Self-Insurance" Broker</h2>
-                        <img alt="Sean Merron" src="img/headshot.jpg" style="height: 200px; margin:15px;" />
-                    </div>
-                    <div>
-                        <p>
-                            I'm the author of The Early Retirement Roadmap, creator of <a href="http://fireagecalc.com" target="_blank">FIREAgeCalc.com</a> and co-host of <a href="http://2frugaldudes.com" target="_blank">The 2 Frugal Dudes Podcast</a>. Once I discovered that I could access my long-term retirement accounts without a penalty before the age of 60 to retire early using my family's middle-class income, I never looked back. There are so many people that still don't know this is possible so I'm paying it forward, sharing my past mistakes and priceless knowledge I've gained over the years from my finance reasearch and college education to help more people retire early. I specifically chose not to become a certified financial advisor so that there would be no special interest to sell you products I'd get a commission on that don't put your best interest first. I call myself a "self-insurance" broker, teaching people how to save and invest their money to tackle any situation with the power of savings. I finally found my purpose and want to help you reach yours through financial freedom.
-                        </p>
-                        <p>
-                            My family had $80,000 in consumer debt that we were able to pay off in just over one year and now compound interest makes us tens of thousands of dollars per year in passive income. We were living the typical American dream we're supposed to live before we broke out of the mold and took our time back.
-                        </p>
-                        <h3>My Story:</h3>
-                        <ul>
-                            <!--<li>Read it: <a href="https://www.ditching9to5.com/34" target="_blank">On The Ditching 9 to 5 Podcast</a></li>-->
-                            <li>Hear it: <a href="http://gohuntlife.com/ep68-retire-30s-frugal-dude-sean-merron-explains-family-set-life/" target="_blank">On The Go Hunt Life Podcast</a></li>
-                            <li>Hear it: <a href="https://www.ditching9to5.com/34" target="_blank">On The Ditching 9 to 5 Podcast</a></li>
-                            <li>Watch it: <a href="http://www.startwithhatch.com/project/sean-merron-early-retirement-roadmap-036/" target="_blank">On The 1000 Four Show</a></li>
-                        </ul>
-                        <div class="text-center">
-                            <a href="http://2frugaldudes.com/" target="_blank"><img src="img/2frugaldudes.jpg" style="margin:15px;" alt="The 2 Frugal Dudes Podcast" class="imgFluid" /></a>
-                        </div>
-                        <a class="twitter-timeline" data-height="400" href="https://twitter.com/seanmerron?ref_src=twsrc%5Etfw">Tweets by @seanmerron</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="text-center">Put Your Money to Work!</h2>
-                    <p>
-                        Your time on this earth is too precious to trade for building your employer's dreams instead of your own. The Early Retirement Roadmap is straight-up, priceless knowledge to get your life on autopilot towards retirement, <strong>faster</strong>.
-                    </p>
-                    <ul>
-                        <li>Learn how to invest your money using a portfolio that works for your goals.</li>
-                        <li>Realize how you can retire early with middle-class savings.</li>
-                        <li>Free up more time for the special moments and never miss another dinner, birthday, wedding, birth or funeral again.</li>
-                        <li>Undergoe the lifestyle transformation for a debt-free, rich life.</li>
-                    </ul>
-                    <p>
-                        This isn't a get rich quick scheme, it's the opportunity every person is given through the choices they make with their personal finances. Every decision you make in your life somehow affects your retirement and my goal is to teach you how to understand the impact of those decisions against living out your true purpose in life. Becoming rich is completely obtainable with your savings. I know because we've setup our life to retire millionaires in our 30's with a middle-class income. Even if you're not in your younger years anymore, early retirement doesn't have to be an extremely low age but it still can be much earlier than you're already on track for. 
-                        <ul>
-                            <li>No inheritance neccessary</li>
-                            <li>No successful business required</li>
-                            <li>No eating rice and beans</li>
-                        </ul>
-                    </p>
-                    <h2>Personal Finance is Too Personal</h2>
-                    <p>
-                        No financial advisor, robo or human, will ever be able to fully understand your unique situation. You have to educate yourself to manage your own personal finances or accept the fact that you'll have to work longer and let other people benefit from the compound interest on your hard-earned savings.</p><p>A sound investment plan doesn't take much to manage, spending a few minutes each month just moving around your money. Build a plan you fully understand instead of not knowing exactly what is happening with your money. You spent your priceless time that you can never get back in exchange for your money and can learn the steps to manage it yourself to sleep at night knowing you've done everything you can to achieve your financial goals. No one knows your life, better than you. Erase the thoughts of wanting someone else to manage your money for you and start making money in your sleep.
-                    </p>
-                    <h2>You've Already Waited Too Long</h2>
-                    <p>
-                        There can't be another day that goes by to wait on educating yourself about the money you're saving and spending. Every day you wait could translate to extra years in retirement and thousands of dollars lost from procrastination. Your future self needs you to start now! it doesn't matter if you're a little behind already, you have to plant the seed as early as possible instead of continuing to pro-long your retirement.
-                    </p><p>
-                        You will learn ways to better manage your money which will inevitably lead to early retirement. How can it not? The sooner you start, the sooner you'll retire.
-                    </p>
-                    <h2>I Don't Like Fancy Jargon</h2>
-                    <p>
-                        Big words suck, especially with your finances. There are a lot of confusing financial terms that cause a lot of people to let "professionals" figure them out, costing the average person thousands of dollars in fees from the confusion they've placed in the industry. Luckily, I hate fancy jargon and try to translate everything I can into layman terms because that's the way I talk anyways and want to make managing money possible for everyone. I love simplifying complex topics and sharing stories in my life for you to relate to, hopefully clearing through the clutter. My goal is to make managing your personal finances simple and fun, not scary and confusing.
-                    </p>
-                    <h2>You CAN Take Your Life Back</h2>
-                    <p>
-                        I don't care where you are in your life, you own it and you can change it. There is no hole too deep that you can't get out of. I know people that were in debt so high between payday and title loans with no hope at all and they were able to climb their way out and now set their lives up to retire early. Don't think you can't either, I'm here to help as one middle-class person to another.</p><p>I accept you wherever you are and want to help move you to where you want to be, faster. Don't feel embarrassed, I've made mistakes too as you'll find out in my story. Some things we just have to learn the hard way but learning from those experiences and using them as motivation throughout the journey ahead will eventually get you to your goal. Just keep swimming...
-                    </p>
-                </div>
-            </div>
-
-            <div class="row" style="margin-top: 50px;" id="divImages">
-                <div class="col-md-6 text-center">
-                    <img alt="Time Quote" src="img/quote1.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/numbers1.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/meme1.png" class="imgFluid" />
-                    <img alt="The Purchase Effect" src="img/numbers4.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/story2.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/numbers6.png" class="imgFluid" />
-                </div>
-                <div class="col-md-6 text-center">
-                    <img alt="The Purchase Effect" src="img/numbers3.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/story1.png" class="imgFluid" />
-                    <img alt="The Purchase Effect" src="img/numbers2.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/meme2.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/numbers5.png" class="imgFluid" />
-                    <img alt="My BMW Story" src="img/numbers7.png" class="imgFluid" />
-                </div>
-            </div>
-
-            <div id="preview" class="row">
-                <h1 class="text-center"><strong>The 4-Step Process to Early Retirement</strong></h1>
-                <div style="color: #FFFFFF;">
-                    <div class="col-md-10 col-md-offset-1" style="background-color: #01bd5d; margin-top: 50px;">
-                        <h2 style="color: #ffca00; margin-bottom: 20px;"><strong>STEP #1: Understand What Retirement Means to YOU</strong></h2>
-                        <p class="lead"><strong>Chapter 1: </strong>What Do You Look Forward to in Retirement?</p>
-                        <p class="lead"><strong>Chapter 2: </strong>There Are No Real Get Rich Quick Schemes</p>
-                        <p class="lead"><strong>Chapter 3: </strong>Enjoy the Journey</p>
-                    </div>
-                    <div class="col-md-10 col-md-offset-1" style="background-color: #00ad54;">
-                        <h2 style="color: #ffca00; margin-bottom: 20px;"><strong>STEP #2: Tracking Your Money</strong></h2>
-                        <p class="lead"><strong>Chapter 4: </strong>How Much Are You Worth?</p>
-                        <p class="lead"><strong>Chapter 5: </strong>Budgeting for Retirement</p>
-                        <p class="lead"><strong>Chapter 6: </strong>Regularly Review Your Spending</p>
-                    </div>
-                    <div class="col-md-10 col-md-offset-1" style="background-color: #008742;">
-                        <h2 style="color: #ffca00; margin-bottom: 20px;"><strong>STEP #3: Overhauling Your Expenses</strong></h2>
-                        <p class="lead"><strong>Chapter 7: </strong>Reducing Complexity in Your Life</p>
-                        <p class="lead"><strong>Chapter 8: </strong>Category by Category Improvements</p>
-                        <p class="lead"><strong>Chapter 9: </strong>Let’s Talk Insurance</p>
-                    </div>
-                    <div class="col-md-10 col-md-offset-1" style="background-color: #006b34;margin-bottom: 30px;">
-                        <h2 style="color: #ffca00; margin-bottom: 20px;"><strong>STEP #4: Directing Your Savings</strong></h2>
-                        <p class="lead"><strong>Chapter 10: </strong>Building Up a Cash Buffer</p>
-                        <p class="lead"><strong>Chapter 11: </strong>Tackling Debt</p>
-                        <p class="lead"><strong>Chapter 12: </strong>Investing Your Savings</p>
-                        <p class="lead"><strong>Chapter 13: </strong>To Retirement and Beyond</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <h2 class="text-center" style="margin-top: 50px;"><span class="fancy">What Other People Are Saying</span></h2>
-                <div id="testimonial">
-                    <p>"Early Retirement or Retirement planning does not have to be difficult. Sean's book simplifies steps you can take to build savings that you think you already know, but you really don't." -Joe Hill</p>
-                    <p>"Sean has helped kick start my interest in financial independence. Since I started listening to his podcast, I've overhauled my long term financial goals and gained a better understanding about how today's actions affect tomorrow." -Larry Burris</p>
-                    <p>"I've known Sean for quite a few years, and the one thing I know is that he wouldn't have done any of this if he didn't believe in it himself - let alone follow his own guidance! Sean has put a lot of research, thought, and time into this book, and if you're looking for guidance on retiring early...start here!" -Eric McBride</p>
-                    <p>"Awesome book. Lots of great tips. I especially like the 'Learn from My Story' sections. I feel like I know you better. Congrats!" -Michael Carter</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="reason-box text-center">
-                        <div class="reason-box-icon">
-                            <span class="glyphicon glyphicon-heart" style="color: red; font-size: 50px; margin: 10px 0px 0px -5px"></span>
-                        </div>
-                        <h3><strong>Lifetime Updates</strong></h3>
-                        <hr style="border-color: #ffca00" />
-                        <p>
-                            Life is always changing so we got your back. If we release any updates to the roadmap, you'll have access to the new content at no extra charge.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="reason-box text-center">
-                        <div class="reason-box-icon">
-                            <span class="glyphicon glyphicon-usd" style="color: #00b050; font-size: 50px; margin: 10px 0px 0px -5px"></span>
-                        </div>
-                        <h3><strong>100% Money Back Guarantee</strong></h3>
-                        <hr style="border-color: #ffca00" />
-                        <p>
-                            If you don't save the amount of your purchase from putting the information to work in your life, we'll give you your money back.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="reason-box text-center">
-                        <div class="reason-box-icon">
-                            <span class="glyphicon glyphicon-calendar" style="color: #ffca00; font-size: 45px; margin: 10px 0px 0px 3px"></span>
-                        </div>
-                        <h3><strong>FREE Monthly Checklist</strong></h3>
-                        <hr style="border-color: #ffca00" />
-                        <p>
-                            You'll find a monthly checklist in the back of the book you can use as a quick reference for applying the information in the book.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row" style="margin-top: 50px;">
-                <div class="col-md-4 text-center">
-                    <img alt="The Early Retirement Roadmap Book Cover" src="img/book-art.png" style="height: 250px;" />
-                    <div class="_form_1"></div>
-                    <script src="https://earlyretirementroadmap.activehosted.com/f/embed.php?id=1" type="text/javascript" charset="utf-8"></script>
-                </div>
-                <div class="col-md-8 text-center">
-                    <img alt="The Early Retirement Roadmap Course Pre-Order" src="img/course-preorder.png" style="border: 2px solid #000000;" class="imgFluid" />
-                </div>
-            </div>
-
-            <div class="row">
-                <table id="tblPrice">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Starter</th>
-                            <th>Premium</th>
-                            <th>Ultimate</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <strong>Digital Version</strong><br />
-                                Save some trees
-                            </td>
-                            <td class="featureChecked">x</td>
-                            <td class="featureChecked">x</td>
-                            <td class="featureChecked">x</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>Audio Version</strong><br />
-                                Listen on the go
-                            </td>
-                            <td></td>
-                            <td class="featureChecked">x</td>
-                            <td class="featureChecked">x</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>Private Chat Room</strong><br />
-                                Ask questions and share your progress with Sean and others like you
-                            </td>
-                            <td></td>
-                            <td class="featureChecked">x</td>
-                            <td class="featureChecked">x</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>Budgeting With Mint Video</strong><br />
-                                Starting a budget is hard, here is how I use Mint
-                            </td>
-                            <td></td>
-                            <td class="featureChecked">x</td>
-                            <td class="featureChecked">x</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>The Online Course</strong><br />
-                                For those serious about Early Retirement with much more content than the book plus live looks into my life
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td class="featureChecked">x</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>Worksheets</strong><br />
-                                Pages of worksheets with ways to take action now from the material in the course
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td class="featureChecked">x</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <strong>Financial Tune-Up</strong><br />
-                                Submit a Financial Tune-Up form for Sean's next-step recommendations
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td class="featureChecked">x</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td class="featurePrice">$27</td>
-                            <td class="featurePrice">$47</td>
-                            <td class="featurePrice">$47</td>
-                        </tr>
-                        <tr id="prices">
-                            <td></td>
-                            <td><a href="https://gum.co/gisip?wanted=true" target="_blank" class="btn-lg btn-primary" style="display: block;padding: 5px;">Order</a></td>
-                            <td><a href="https://gum.co/gisip?wanted=true" target="_blank" class="btn-lg btn-primary" style="display: block;padding: 5px;">Order</a></td>
-                            <td><a href="https://gum.co/gisip?wanted=true" target="_blank" class="btn-lg btn-primary" style="display: block;padding: 5px;">Pre-Order</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
         </div>
+    </section>
+    <!--  End Hero Section  -->
+
+
+    <div style="margin-top:20px;" class="container">
+
+        <div class="tab-content">
+
+            <div class="row panel panel-default" style="padding-bottom:50px;">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <section id="input-data">
+                        <div class="container-fluid">
+
+                            <div class="page-header text-center animated wow fadeInDown">
+                                <p class="lead">Please fill in the following fields</p>
+                                <div class="col-sm-12 text-center">
+                                    <a href="https://www.paypal.me/seanmerron" target="_blank"><img src="img/donate.gif"></a>
+                                </div>
+                                <a data-toggle="modal" href='#modal1' class="app_store_btn text-uppercase" id="play_video" style="margin-top:15px;">
+                                    <i class="play_icon"></i>
+                                    <span>Watch how to use this calculator</span>
+                                </a>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>Current Age</h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <input type="text" autofocus class="form-control input-lg" value="30" id="H5" placeholder="Current Age">
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>Investment Portfolio<span data-toggle="tooltip" data-title="Total balance of all investments (taxable brokerage and tax-advantaged retirement accounts)" data-placement="left" class="glyphicon glyphicon-question-sign pull-right"></span></h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-addon">$</div>
+                                        <input type="text" id="H6" value="275000" class="money form-control input-lg" placeholder="Investment Portfolio">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>Yearly Contributions<span data-toggle="tooltip" data-title="Money you can continue to contribute/save yearly into your investments" data-placement="left" class="glyphicon glyphicon-question-sign pull-right"></span></h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-addon">$</div>
+                                        <input type="text" id="H7" value="48000" class="money form-control input-lg" placeholder="Yearly Contributions">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>Retirement Expenses<span data-toggle="tooltip" data-title="Expected yearly expenses + taxes at retirement age (FIRE) in today's dollars (inflation accounted for in yearly return)" data-placement="left" class="glyphicon glyphicon-question-sign pull-right"></span></h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-addon">$</div>
+                                        <input type="text" id="H8" value="41400" class="money form-control input-lg" placeholder="Retirement Expenses">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>Expected Return<span data-toggle="tooltip" data-title="The return you expect for your portfolio after inflation and taxes. Enter a rate based on your risk portfolio." data-placement="left" class="glyphicon glyphicon-question-sign pull-right"></span></h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <div class="input-group input-group-lg">
+                                        <input type="text" id="H9" value="5" class="percentage form-control input-lg" placeholder="Expected Returns">
+                                        <div class="input-group-addon">%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>Withdrawal Rate<span data-toggle="tooltip" data-title="The rate you'd prefer to withdrawal from your portfolio for retirement" data-placement="left" class="glyphicon glyphicon-question-sign pull-right"></span></h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <div class="input-group input-group-lg">
+                                        <input type="text" id="H10" value="4" class="percentage form-control input-lg" placeholder="">
+                                        <div class="input-group-addon">%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!-- container-fluid -->
+                    </section>
+
+                    <section id="early-retirement">
+                        <div class="container-fluid">
+
+                            <div class="page-header text-center animated wow fadeInDown">
+
+                                <div id="warning" style="margin:0;display:none;" class="alert alert-danger">
+                                    Unable to achieve FIRE before 60
+                                </div>
+                            </div>
+
+
+
+                            <div class="row highlight">
+
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>FIRE Age<span data-toggle="tooltip" data-title="The age you can retire" data-placement="left" class="glyphicon glyphicon-question-sign pull-right"></span></h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <h3 id="H12">0</h3>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-sm-8 animated wow fadeInRight">
+                                    <h3>FIRE Balance<span data-toggle="tooltip" data-title="Balance of investments when you retire" data-placement="left" class="glyphicon glyphicon-question-sign pull-right"></span></h3>
+                                </div>
+                                <div class="col-sm-4 animated wow fadeInLeft">
+                                    <h3 id="H13">0</h3>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                        <!-- container-fluid -->
+                    </section>
+
+                </div>
+            </div>
+            <!-- row -->
+
+        </div><!-- tab-content -->
 
     </div>
+    <!-- fireage container -->
 
-    <div id="contact">
+
+    <section id="swr-retirement">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h2><strong>I Want to Hear From You!</strong></h2>
-                    <ul class="lead">
-                        <li>All feedback is appreciated!</li>
-                        <li>Let me know if you have any questions.</li>
-                        <li>Reach out for affiliate partnerships.</li>
-                    </ul>
-                    <p class="lead">I will get back to you ASAP!</p>
-                    <p class="lead">I am also <a href="https://drive.google.com/file/d/0ByfYIhtzqBvPM005cTNGTHhKSTA/view?usp=sharing" target="_blank" style="color: #ffca00">available for speaking</a> opportunities.</p>
-                    <p>&copy; 2017 Early Retirement Roadmap</p>
+                <div class="col-sm-8 text-center col-sm-offset-2">
+                    <h3>Brought to You by The 2 Frugal Dudes Podcast!</h3>
+                    <a href="http://2frugaldudes.com/" target="_blank">
+                        <img alt="The 2 Frugal Dudes Podcast" src="img/2FrugalDudes-PodcastArt-Small.jpg" height="250" />
+                    </a>
+                    <p style="font-size: 1.2em; margin-top: 30px; text-align: left;">This podcast dives into middle class financial topics for both the average full time employee (Sean) and the small business owner (Kevin). Come learn some tips about saving money and how living frugal can help you achieve financial freedom. Kevin and Sean have varying opinions on important financial topics and you'll get to weigh out the pros and cons of their decisions to decide what's best for your situation. Living a frugal life can be fulfilling, learning how to cut back on the repetitive costs of life so you can splurge when necessary.</p>
+                    <a href="http://2frugaldudes.com/" target="_blank" class="btn btn-primary" style="margin: 15px;">Learn More</a>
                 </div>
-                <div class="col-md-6">
-                    <div class="_form_3"></div>
-                    <script src="https://earlyretirementroadmap.activehosted.com/f/embed.php?id=3" type="text/javascript" charset="utf-8"></script>
+            </div>
+        </div>
+        <!-- container-fluid -->
+    </section>
+
+    <section>
+        <div class="container">
+
+
+
+            <div class="row">
+                <div class="col-sm-12 well" style="margin:40px 0;">
+                    <p>
+                        <strong>Disclaimer:</strong>
+                        This calculator is just an estimation, returns are not guaranteed. When withdrawals start you may not get your expected return. Use at your own risk or speak with a financial advisor.
+                    </p>
+                    <p><strong>Room for Error:</strong> Calculations make contributions at the end of the year and withdrawals at the start of the year; This adds some room for error if you use a monthly strategy instead.</p>
+                    <p>
+                        <strong>Privacy:</strong>
+                        We do not store or use any kind of information supplied on this website.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- container-fluid -->
+    </section>
+
+    <!--  Email Subscription Section  -->
+
+    <!--  End Email Subscription Section  -->
+    <!--  Footer Section  -->
+    <footer>
+
+        
+    </footer>
+    <!--  End Footer Section  -->
+    <div class="modal fade" id="modal1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">How to Use FIRE Age Calculator</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/ICTeV5nk-PA" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+
 </body>
 </html>

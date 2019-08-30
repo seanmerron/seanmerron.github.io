@@ -1,71 +1,167 @@
-﻿//Slideshow for Background
-//Array of images which you want to show: Use path you want.
-//var images = new Array('../img/road-mountain.jpeg', '../img/freedom.jpeg', '../img/road-desert.jpg', '../img/freedom.jpg', '../img/road-forest.jpeg', '../img/field.jpg',  '../img/road-snow.jpg');
-var nextimage = 0;
-//doSlideshow();
+$(document).ready(function(){
 
-$(window).scroll(function () {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("navbar-colored");
-    } else {
-        $(".navbar-fixed-top").removeClass("navbar-colored");
-    }
+
+	//wow.js on scroll animations initialization
+	wow = new WOW(
+	{
+		animateClass: 'animated',
+		mobile: false,
+		offset: 50
+	}
+	);
+	wow.init();
+
+
+	//parallax effect initialization
+	$('.hero').parallax("50%", 0.3);
+
+	//Nice scroll initialization
+	$("html").niceScroll({
+		scrollspeed: 50,
+		autohidemode : false,
+		cursorwidth : 8,
+		cursorborderradius: 8,
+		cursorborder : "0",
+		background : "rgba(48, 48, 48, .4)",
+		cursorcolor : '#1f1f1f',
+		zindex : 999
+	});
+
+
+// calculator logic
+
+$('[data-toggle="tooltip"]').tooltip();
+
+$('input[name="options"]').on('change', function(){
+	switch($(this).val()){
+		case 'fireage':
+		$('#hero .caption h1').text('Fire Age Calculator');
+		$('#fireage-section').show();
+		$('#deferred-section').hide();
+		break;
+		case 'deferred':
+		$('#hero .caption h1').text('Deferred Calculator');
+		$('#deferred-section').show();
+		$('#fireage-section').hide();
+		break;
+	}
 });
 
-attachPromoCodes();
+$('input').on('keyup', performCalculations);
 
-var testimonials = new Array("\"Early Retirement or Retirement planning does not have to be difficult. Sean's book simplifies steps you can take to build savings that you think you already know, but you really don't.\" -Joe Hill",
-    "\"Sean has helped kick start my interest in financial independence. Since I started listening to his podcast, I've overhauled my long term financial goals and gained a better understanding about how today's actions affect tomorrow.\" -Larry Burris",
-    "\"I've known Sean for quite a few years, and the one thing I know is that he wouldn't have done any of this if he didn't believe in it himself - let alone follow his own guidance! Sean has put a lot of research, thought, and time into this book, and if you're looking for guidance on retiring early...start here!\" -Eric McBride",
-    "\"Awesome book. Lots of great tips. I especially like the 'Learn from My Story' sections. I feel like I know you better. Congrats!\" -Michael Carter");
-var nextTestimonial = 0;
-//doTestimonial();
-
-function doSlideshow() {
-    if (nextimage >= images.length) { nextimage = 0; }
-    $('#dream')
-    .css('background-image', 'url("' + images[nextimage++] + '")')
-    .fadeIn(600, function () {
-        setTimeout(function () {
-            $('#dream').fadeOut(300, doSlideshow);
-        }, 8000);
-    });
+function FV(rate, nper, pmt, pv, type) {
+	if(pv == undefined){
+		pv = 0;
+	}
+	if(type == undefined){
+		type = 0;
+	}
+	var pow = Math.pow(1 + rate, nper),
+	fv;
+	if (rate) {
+		fv = (pmt*(1+rate*type)*(1-pow)/rate)-pv*pow;
+	} else {
+		fv = -1 * (pv + pmt * nper);
+	}
+	return fv.toFixed(2);
 }
 
-function doTestimonial() {
-    if (nextTestimonial >= testimonials.length) { nextTestimonial = 0; }
-    $('#testimonial')
-    .html(testimonials[nextTestimonial++])
-    .fadeIn(1500, function () {
-        setTimeout(function () {
-            $('#testimonial').fadeOut(1500, doTestimonial);
-        }, 8000);
-    });
-}
+function NPER (Rate, Pmt, PV, FV, Type) {
 
-function attachPromoCodes() {
-    var url = window.location.href;
-    if (url.lastIndexOf("#") > 0) {
-        // Get the code        
-        var code = url.substr(url.lastIndexOf("#") + 1);
+		      FV=FV || 0; // default value of 0;
+		      Type=Type || 0; // default value of 0;
 
-        // Affiliate codes
-        // This created a recursing loop just have affiliates use the gumroad url
-        //var affiliates = {
-        //    erd: "https://gumroad.com/a/213988467",
-        //    hatch: "https://gumroad.com/a/434844787",
-        //    thefrugalgirl: "https://gumroad.com/a/955855987",
-        //    gohuntlife: "https://gumroad.com/a/474395763"
-        //}
+		      var totalIncomeFromFlow;
+		      var sumOfPvAndPayment;
+		      var currentValueOfPvAndPayment;
+		      
+		      if (Rate == 0 && Pmt == 0) {
+		      	alert("Invalid Pmt argument");
+		      	return null;
+		      }
+		      else if (Rate == 0)
+		      	return (- (PV + FV) / Pmt);
+		      else if (Rate <= -1) {
+		      	alert("Invalid Pmt argument");
+		      	return null;
+		      }
+		      
+		      totalIncomeFromFlow = (Pmt / Rate);
+		      if (Type == 1) {
+		      	totalIncomeFromFlow *= (1 + Rate);
+		      }
 
-        //// Update to affiliate links if affiliate
-        //if (affiliates.hasOwnProperty(code))
-        //    window.location = affiliates[code];
-        //else {
-            // Update links with code
-            $('#prices').find(".btn-lg").each(function () {
-                $(this).attr('href', $(this).attr('href') + '/' + code);
-            });
-        //}
-    }
-}
+		      sumOfPvAndPayment = (-FV + totalIncomeFromFlow);
+		      currentValueOfPvAndPayment = (PV + totalIncomeFromFlow);
+		      if ((sumOfPvAndPayment < 0) && (currentValueOfPvAndPayment < 0)) {
+		      	sumOfPvAndPayment = -sumOfPvAndPayment;
+		      	currentValueOfPvAndPayment = 0-currentValueOfPvAndPayment;
+		      }
+		      else if ((sumOfPvAndPayment <= 0) || (currentValueOfPvAndPayment <= 0)) {
+		      	alert("NPer cannot be calculated");
+		      	return null;
+		      }
+
+		      totalInterestRate = sumOfPvAndPayment / currentValueOfPvAndPayment;
+		      return Math.log(totalInterestRate) / Math.log(Rate + 1);
+		  }
+
+		  $('.number').number(true, 2);
+
+		  function performCalculations(){
+
+		  	var longTermAge = parseFloat($('#longTermAge').val());
+		  	longTermAge = isNaN(longTermAge)? '': longTermAge;
+		  	$('.longTermAge').text(longTermAge);
+
+		  	var currentAge = parseFloat($('#currentAge').val());
+		  	var startingBalance = parseFloat($('#startingBalance').val());
+		  	var yearlyContributions = parseFloat($('#yearlyContributions').val());
+		  	var expensesAtFire = parseFloat($('#expensesAtFire').val());
+		  	var yearlyReturn = parseFloat($('#yearlyReturn').val())/100;
+
+			// $('#balanceAtFireAge').val( FV(yearlyReturn,) );
+
+			var fireAge = currentAge;
+			var balanceAt60 = 0;
+			var balanceAtFireAge = 0;
+
+			while(fireAge < longTermAge){
+				fireAge += 0.25;
+
+				balanceAtFireAge = FV(yearlyReturn,fireAge-currentAge, -1*yearlyContributions,-1*startingBalance);
+
+				balanceAt60 = FV(yearlyReturn,longTermAge-fireAge,expensesAtFire,-1*balanceAtFireAge,1);
+
+				if(balanceAt60 >= 0){
+					break;
+				}
+
+			} 
+			
+
+			$('#fireAge').text($.number(fireAge,2));
+			$('#balanceAtFireAge').text('$ '+$.number(balanceAtFireAge,2));
+			$('#balanceAt60').text('$ '+$.number(balanceAt60,2));
+
+			var fireverBalance = expensesAtFire/yearlyReturn;
+			var fireverAge = NPER(yearlyReturn,-1*yearlyContributions, -1*startingBalance, fireverBalance, 0 )+currentAge;
+
+			$('#fireverBalance').text('$ '+$.number(fireverBalance,2));
+			$('#fireverAge').text($.number(fireverAge,2));
+
+			var SWRBalance = expensesAtFire/0.04;
+			var SWRAge = NPER(yearlyReturn, -1*yearlyContributions, -1*startingBalance, SWRBalance, 0)+currentAge;
+
+			$('#SWRBalance').text('$ '+$.number(SWRBalance,2));
+			$('#SWRAge').text($.number(SWRAge,2));
+
+		}
+
+
+		performCalculations();
+
+
+
+
+	});

@@ -1,0 +1,528 @@
+/*		Fonts		*/
+@font-face {
+	font-family: 'open_regular';
+	src: url('../fonts/opensans-regular.eot');
+	src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/opensans-regular.woff') format('woff'),
+	url('../fonts/opensans-regular.ttf') format('truetype'),
+	url('../fonts/opensans-regular.svg#LatoRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+@font-face {
+	font-family: 'open_bold';
+	src: url('../fonts/opensans-bold.eot');
+	src: url('../fonts/opensans-bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/opensans-bold.woff') format('woff'),
+	url('../fonts/opensans-bold.ttf') format('truetype'),
+	url('../fonts/opensans-bold.svg#LatoRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+@font-face {
+	font-family: 'open_semibold';
+	src: url('../fonts/opensans-semibold.eot');
+	src: url('../fonts/opensans-semibold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/opensans-semibold.woff') format('woff'),
+	url('../fonts/opensans-semibold.ttf') format('truetype'),
+	url('../fonts/opensans-semibold.svg#open_sanssemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+/*		General CSS		*/
+body{
+	background: #faf9f9;
+	background-image:url('../img/crossword.png');
+	padding: 0px;
+	margin: 0px;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+}
+
+a:focus{
+	color: #fff!important;
+	text-decoration: none!important;
+}
+
+.container{
+	max-width: 1130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*		Featured on section 		*/
+
+.featured_on{
+	width: 100%;
+	padding: 25px 0;
+	background: #f3f3f3;
+}
+
+.featured_on ul{
+	margin: 0;
+}
+
+.featured_on li{
+	position: relative;
+	height: 100%;
+}
+
+.featured_on li:first-child{
+	margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*		Hero section 		*/
+
+.hero{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 280px;
+	background: url('../img/hero1.jpg') no-repeat fixed center center;	
+	background-size: cover;
+}
+
+.hero .caption{
+	position: absolute;
+	max-width: 650px;
+	margin-left: 80px;
+	top: 50%;
+	transform:translate(0,-50%);
+	-webkit-transform:translate(0,-50%);
+	-moz-transform:translate(0,-50%);
+	-o-transform:translate(0,-50%);
+}
+
+.hero .caption h1{
+	color: white;
+	text-shadow:2px 2px 5px maroon;
+	font-family: "open_bold", Helvetica, Arial, sans-serif;
+	font-size: 34px;
+	font-weight: bold;
+	word-break: break-word;
+}
+
+.hero .caption p{
+	color: darkgreen;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 30px;
+	margin: 15px 0 15px 0;
+}
+
+#slider .caption p{
+	margin: 0;
+}
+
+a.app_store_btn{
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 40px;
+	border: 2px solid #525252;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	margin:  0;
+
+	color: #525252;
+	font-family: "open_semibold", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+
+
+.play_icon,
+.android_icon,
+.iphone_icon{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-bottom: 3px;
+}
+
+.play_icon{
+	background: url('../img/play.png') no-repeat;
+}
+
+.iphone_icon{
+	background: url('../img/iphone_app.png') no-repeat;
+}
+
+.android_icon{
+	background: url('../img/android_app.png') no-repeat;
+}
+
+
+a.app_store_btn:hover,
+a.app_store_btn:focus{
+	border-color: #db2724;
+    color: #db2724!important;
+}
+
+a.app_store_btn:hover .play_icon{
+	background: url('../img/play_hover.png') no-repeat;
+}
+
+a.app_store_btn:hover .iphone_icon{
+	background: url('../img/iphone_app_hover.png') no-repeat;
+}
+
+a.app_store_btn:hover .android_icon{
+	background: url('../img/android_app_hover.png') no-repeat;
+}
+
+a.app_link{
+	text-transform: lowercase;
+	letter-spacing: .5px;
+	color: #636363;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+a.app_link:hover,
+a.app_link:focus{
+	text-decoration: none;
+	color: #41c27d!important;
+}
+
+a.app_store_btn,
+.play_icon,
+.iphone_icon,
+.android_icon,
+a.app_link{
+	transition: all .2s linear;
+	-o-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+}
+
+
+
+
+
+
+/*		Subscription section 		*/
+
+.sub_box{
+	width: 100%;
+	padding: 40px 0;
+	text-align: center;
+	background: lightblue;
+}
+
+.sub_box .cta_text{
+	color: darkgreen;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.sub_box #mc-email{
+	display: inline-block;
+	width: 300px;
+	height: 50px;
+	padding: 0 20px;
+	background-color: #fff;
+	border: 0;
+	outline: none;
+	margin-right: -4px;
+	color: #41c17d;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	vertical-align: middle;
+
+	border-top-left-radius: 2px;
+	-o-border-top-left-radius: 2px;
+	-moz-border-top-left-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+
+	border-bottom-left-radius: 2px;
+	-o-border-bottom-left-radius: 2px;
+	-moz-border-bottom-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+
+	
+}
+
+.sub_box #mc_submit{
+	display: inline-block;
+	width: 60px;
+	height: 50px;
+
+	border-top-right-radius: 2px;
+	-o-border-top-right-radius: 2px;
+	-moz-border-top-right-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+
+	border-bottom-right-radius: 2px;
+	-o-border-bottom-right-radius: 2px;
+	-moz-border-bottom-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+
+	background-color: #fff;
+	border: 0;
+	outline: none;
+	margin-right: -4px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.sub_box #mc_submit i{
+	display: inline-block;
+	width: 20px;
+	height: 14px;
+	vertical-align: middle;
+}
+
+#mc_submit i.icon{
+	background: url('../img/sub_icon.png') no-repeat;
+}
+
+#mc_submit i.loading{
+	background: url('../img/loading.gif') no-repeat;
+}
+
+.sub_box .message{
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	text-transform: lowercase;
+	margin-top: 20px;
+}
+
+.sub_box #error_msg,
+.sub_box #success_msg{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*		Footer 		*/
+
+footer{
+	padding: 50px 0;
+	text-align: center;
+	background: url("../img/pw_maze_black.png");
+}
+
+footer .app_platform li{
+	margin: 0 0 0 60px;
+}
+
+footer .app_platform li:first-child{
+	margin: 0;
+}
+
+footer .copyright{
+	margin-top: 30px;
+	color: #757171;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	letter-spacing: .5px;
+}
+
+footer .copyright a{
+	color: #565555;
+}
+
+
+
+
+
+
+
+
+
+/*		Responsive CSS 		*/
+
+@media (max-width: 360px) {
+	.featured_on li{
+		display: block;
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+
+	/*		Header 		*/
+	header .logo{
+		margin-right: 0;
+	}
+
+	header .burger_icon{
+		display: block;
+	}
+
+	header nav{
+		width: 100%;
+		float: none;
+		background: #47ad76;
+		position: absolute;
+		margin-top: 130px;
+		left: 0;
+		display: none;
+	}
+
+	header nav.show{
+		display: block;
+	}
+
+
+	header nav li{
+		display: block;
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+
+	header nav li a{
+		display: block;
+		width: 100%;	
+		padding: 20px 0;
+		border-bottom: 1px solid #389965;
+	}
+
+	header nav li:first-child a{
+		border-top: 1px solid #389965;
+	}
+
+	header .social{
+		display: none;
+	}
+
+	header .social li{
+		margin-left: 10px;
+	}
+
+
+
+
+
+
+	/*		Hero section 		*/
+	.hero .caption{
+		margin-left: 0;
+	}
+
+	.app_store_btn{
+		display: block;
+		width: 90%;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+
+
+
+
+
+	/*		Featured on section		*/
+	.featured_on{
+		padding: 25px 0 5px 0!important;
+	}
+
+	.featured_on ul li{
+		margin-bottom: 25px!important;
+	}
+
+
+
+
+
+
+	/*		About Section 		*/
+	.about .features_list {
+		text-align: center;
+		margin: 0;
+	}
+
+	.about .features_list ul li{
+		text-indent: 0;
+		background: transparent!important;
+		margin-bottom: 20px;
+	}
+
+	.about .features_list ul li:last-child{
+		margin: 0;
+	}
+
+	a.app_link{
+		display: block;
+		margin-top: 20px;
+	}
+
+
+
+
+
+
+	/*		Subscription section 		*/
+	.sub_box #mc-email,
+	.sub_box #mc_submit{
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.sub_box #mc_submit{
+		margin-top: 20px;
+	}
+}
+
+
+span.glyphicon-question-sign{
+	color:silver;
+}
+
+.page-header{
+	color:darkgreen;
+}
+
+
+
+section h3{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+section .row{
+	margin-top:10px;
+}
