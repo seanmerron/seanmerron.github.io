@@ -37,8 +37,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url('../images/background.png');
-    background-size: cover;
+    background-image: url('../images/background.png');    
     color: #FFFFFF;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-size: 20px;
@@ -92,7 +91,10 @@ h2 {
 }
 
 /* Desktop-only styles */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+    body {
+        background-size: cover;
+    }
     #content {
         width: 40%;
     }    
@@ -101,12 +103,11 @@ h2 {
 /* Mobile-only styles */
 @media (max-width: 767px) {
     h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
     
     h2 {
         font-size: 1.8em;
-        margin-bottom: 200px;
     }
 
     #content {
@@ -123,7 +124,7 @@ h2 {
     }
 
     #pBlurb {
-        font-size:1.2em;
+        font-size:1em;
     }
 
     #pInfo {
